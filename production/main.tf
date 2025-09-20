@@ -3,4 +3,6 @@ module "vpc" {
   project_name = var.project_name
   cidr-block   = var.cidr-block
   VpcNameTag   = var.VpcNameTag
+  cidrnewbit   = var.cidrnewbit
+
 }
