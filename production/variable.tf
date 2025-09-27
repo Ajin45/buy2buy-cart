@@ -38,6 +38,13 @@ variable "cidrnewbit" {
 }
 
 
+variable "sgports" {
+  type        = list(string)
+  description = "ports"
+
+}
+
+
 
 
 
