@@ -8,3 +8,4 @@ global_tags = {
 cidr-block = "172.18.0.0/16"
 VpcNameTag = "production-vpc"
 cidrnewbit = "3"
+sgports    = ["80", "443"]
