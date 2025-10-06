@@ -15,3 +15,7 @@ variable "project_name" {
 
 }
 
+variable "public_subnets" {
+    type = list(string)
+    description = "public subnets from vpc module"
+}

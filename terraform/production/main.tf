@@ -12,6 +12,5 @@ module "ec2" {
   vpc_id  = module.vpc.vpc_id
   sgports = var.sgports
   project_name = var.project_name
-
-
+  public_subnets = module.vpc.public_subnets_ids
 }

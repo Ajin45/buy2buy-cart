@@ -1,2 +1,2 @@
-/production/.terraform
-/production/.terraform.lock.hcl
+/terraform/production/.terraform
+/terraform/production/.terraform.lock.hcl

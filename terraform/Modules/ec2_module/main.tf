@@ -22,3 +22,17 @@ resource "aws_vpc_security_group_ingress_rule" "sgrule_for_frontend" {
   to_port           = each.key
   ip_protocol       = "tcp"
 }
+
+#creating ec2-instance
+
+resource "aws_instance" "web" {
+  ami                    = data.aws_ami.ami_from_packer.id
+  instance_type          = "t3.micro"
+  key_name               = data.aws_key_pair.study_key.key_name
+  security_groups = [aws_security_group.general_security_group.id]
+  subnet_id              = var.public_subnets[1]
+  tags = {
+    Name        = "WebServer"
+    Environment = "dev"
+  }
+}
